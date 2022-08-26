@@ -98,13 +98,14 @@ const Dashboard = () => {
                                     <div className="bottom-box">
                                         <div className="bottom">
                                             <p>Available:</p>
-                                            <img src="/images/Line 18.png" alt="img" />
+                                            <img src="/images/Line 18.png" alt="img" className="iconhide iconHide"/>
                                             <h3>100 USDT</h3>
+                                            <img src="/images/Line 18.png" alt="img" className="iconhide iconhidetwo"/>
                                         </div>
 
                                         <div className="bottom">
                                             <p>Locked:</p>
-                                            <img src="/images/Line 18.png" alt="img" />
+                                            <img src="/images/Line 18.png" alt="img" className="iconhide iconHide"/>
                                             <h3>100 USDT</h3>
                                         </div>
                                     </div>

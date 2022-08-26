@@ -17,6 +17,7 @@ const Staking = () => {
                 <div className="content-wrapper">
                     <Circle />
                     <section className="section dash-section staking-section">
+                        
                         <div className="wrapper">
                             <h3>Staking</h3>
                             <div className="box-wrap column-wrap">
