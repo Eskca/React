@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Dashheader from "../../components/Dashheader";
 import Dashaside from "../../components/Dashaside";
 import ConnectCard from "../../components/ConnectCard";
@@ -9,15 +9,19 @@ const Staking = () => {
     const toggleTab = () =>{
         dropRef.current.classList.toggle("closed");
     }
+    const [navState, setNavState] = useState(false);
+    const toggleNav = () => {
+        setNavState(!navState)
+    }
     return (
         <React.Fragment>
             <Dashheader />
             <main className="main-dash">
-                <Dashaside />
+                <Dashaside className={navState === false ? "dashaside" : "dashaside open"}/>
                 <div className="content-wrapper">
                     <Circle />
                     <section className="section dash-section staking-section">
-                        
+                        <img src="/images/Menu-Ico.png" alt="menu"  className='smallIcon' onClick={toggleNav}/>
                         <div className="wrapper">
                             <h3>Staking</h3>
                             <div className="box-wrap column-wrap">

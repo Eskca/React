@@ -80,8 +80,21 @@ header{
   width: 33%;
   height: 100%;
   padding: 1rem;
+  top: 5.1rem;
+  position: absolute;
+  left:-20rem;
+  transition: left .4s ease-in-out;
+}
+
+.open{
   left: 0;
-  top: 5.7rem;
+}
+
+.smallIcon{
+  width: 24px;
+  margin-bottom: 1rem;
+  align-self: flex-end;
+  cursor: pointer;
 }
 
 .dashaside ul{
@@ -147,10 +160,11 @@ header{
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  overflow: hidden;
 }
 
 .content-wrapper{
-  width: 74%;
+  width: 100%;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -159,6 +173,10 @@ header{
 
 .content-wrapper img{
   width: 250px;
+}
+
+.content-wrapper .smallIcon{
+  width: 24px;
 }
 
 header a{
@@ -659,7 +677,7 @@ section{
 }
 /* dashboard styles; */
 .dash-section{
-  width: 65%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -943,6 +961,7 @@ section{
 
 .main-wallet .smallIcon{
   width: 40px;
+  align-self: center;
 }
 
 .main-wallet .button{
@@ -1084,8 +1103,8 @@ section{
 }
 
 .circle{
-  width: 50%;
-  height:50%;
+  width: 70%;
+  height:70%;
   background: linear-gradient(180deg, rgba(23, 23, 23, 0.5) 0%, rgba(255, 60, 212, 0.5) 100%);
   opacity: 0.5;
   filter: blur(250px);
@@ -1361,6 +1380,13 @@ section{
 
   .dashaside{
     max-width: 314px;
+    top: 0;
+    position: relative;
+    left:0;
+  }
+
+  .dash-section{
+    width: 67%;
   }
 
   .features .wrapper > h3{
@@ -1492,6 +1518,10 @@ section{
 
   .dash-section .bottom img{
     width: 30%;
+  }
+
+  .smallIcon{
+    display: none;
   }
 }
 

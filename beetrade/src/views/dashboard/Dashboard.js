@@ -1,17 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import Dashheader from "../../components/Dashheader";
 import Dashaside from "../../components/Dashaside";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import Circle from "../../components/Circle";
 const Dashboard = () => {
+    const [navState, setNavState] = useState(false);
+    const toggleNav = () => {
+        setNavState(!navState)
+    }
     return (
         <React.Fragment>
             <Dashheader />
             <main className="main-dash">
-                <Dashaside />
+                <Dashaside className={navState === false ? "dashaside" : "dashaside open"}/>
                 <section className="section dash-section">
                     <Circle />
+                    <img src="/images/Menu-Ico.png" alt="menu"  className='smallIcon' onClick={toggleNav}/>
                     <div className="wrapper">
                         <div className="box-wrapp">
                             <div className="group-one">
