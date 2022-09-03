@@ -9,21 +9,22 @@ const Dashboard = () => {
     const toggleNav = () => {
         setNavState(!navState)
     }
+
     return (
         <React.Fragment>
-            <Dashheader />
+            <Dashheader openSideBar={toggleNav} />
             <main className="main-dash">
-                <Dashaside className={navState === false ? "dashaside" : "dashaside open"}/>
+                <Dashaside  className={navState === false ? "dashaside" : "dashaside open"} linkState={'high'}/>
                 <section className="section dash-section">
                     <Circle />
-                    <img src="/images/Menu-Ico.png" alt="menu"  className='smallIcon' onClick={toggleNav}/>
                     <div className="wrapper">
                         <div className="box-wrapp">
                             <div className="group-one">
-                                <img src="/images/Frame 35630.png" alt="images" className="img"/>
+                                <img src="/images/Frame 35630.png" alt="images" className="img desktop-img"/>
+                                <img src="/images/mobile-img.png" alt="images" className="img mobile-img"/>
                                 <div className="box-wrap boxTwo">
                                     <div className="box">
-                                        <h3>Order</h3>
+                                        <h3>Order Book</h3>
                                         <div className="table-wrap">
                                             <div className="table">
                                                 <div className="row">
@@ -103,14 +104,13 @@ const Dashboard = () => {
                                     <div className="bottom-box">
                                         <div className="bottom">
                                             <p>Available:</p>
-                                            <img src="/images/Line 18.png" alt="img" className="iconhide iconHide"/>
+                                            <img src="/images/Line 18.png" alt="img" className="iconhide"/>
                                             <h3>100 USDT</h3>
-                                            <img src="/images/Line 18.png" alt="img" className="iconhide iconhidetwo"/>
                                         </div>
 
                                         <div className="bottom">
                                             <p>Locked:</p>
-                                            <img src="/images/Line 18.png" alt="img" className="iconhide iconHide"/>
+                                            <img src="/images/Line 18.png" alt="img" className="iconhide"/>
                                             <h3>100 USDT</h3>
                                         </div>
                                     </div>

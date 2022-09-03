@@ -12,16 +12,16 @@ const Staking = () => {
     const [navState, setNavState] = useState(false);
     const toggleNav = () => {
         setNavState(!navState)
-    }
+    }    
+
     return (
         <React.Fragment>
-            <Dashheader />
+            <Dashheader openSideBar={toggleNav}/>
             <main className="main-dash">
-                <Dashaside className={navState === false ? "dashaside" : "dashaside open"}/>
+                <Dashaside className={navState === false ? "dashaside" : "dashaside open"} stakingLink={'high'}/>
                 <div className="content-wrapper">
                     <Circle />
                     <section className="section dash-section staking-section">
-                        <img src="/images/Menu-Ico.png" alt="menu"  className='smallIcon' onClick={toggleNav}/>
                         <div className="wrapper">
                             <h3>Staking</h3>
                             <div className="box-wrap column-wrap">
@@ -41,6 +41,8 @@ const Staking = () => {
                                         <h3>0 BTF</h3>
                                     </div>
 
+                                    <img src="/images/chevron.png" alt="chevron" onClick={() => toggleTab(0)} className='mobilechev'/>
+
                                     <div className="column">
                                         <p>APR</p>
                                         <h3>11%</h3>
@@ -49,10 +51,10 @@ const Staking = () => {
                                     <div className="column">
                                         <p>Total Stacked</p>
                                         <h3>-$20,255,658</h3>
-                                        <p className="total">22,527,539 BTF</p>
+                                        <p>22,527,539 BTF</p>
                                     </div>
 
-                                    <img src="/images/chevron.png" alt="chevron" onClick={() => toggleTab(0)}/>
+                                    <img src="/images/chevron.png" alt="chevron" onClick={() => toggleTab(0)} className='desktopchev'/>
                                 </div>
                                 <div className='box-bottom' ref={dropRef}>
                                     <ConnectCard header={'Deposited'} desc={'0BTF'}/>

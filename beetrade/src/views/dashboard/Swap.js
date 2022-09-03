@@ -15,12 +15,11 @@ const Swap = () => {
     }
     return (
         <React.Fragment>
-            <Dashheader />
+            <Dashheader  openSideBar={toggleNav}/>
             <main className="main-dash new-main">
-                <Dashaside className={navState === false ? "dashaside" : "dashaside open"}/>
+                <Dashaside className={navState === false ? "dashaside" : "dashaside open"} swapLink={'high'}/>
                 <section className="section dash-section swap-section">
                     <Circle />
-                    <img src="/images/Menu-Ico.png" alt="menu"  className='smallIcon' onClick={toggleNav}/>
                     <div className="btnwrap">
                         <button className={toggleState === 1 ? "active-button" : ""} onClick={() => toggleTab(1) }>Swap</button>
                         <button className={toggleState === 2 ? "active-button" : ""} onClick={() => toggleTab(2) }>Liquidity</button>

@@ -1,17 +1,15 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Soon from "./Soon";
-const Dashaside = ({className}) => {
-    const [toggleNavState, setToggleNavState] = useState(1);
-    const toggleNav = (index) => {
-        setToggleNavState(index);
-    }
+const Dashaside = ({className, linkState, swapLink,stakingLink}) => {
+    
+
     return (
         <nav className={className}>
             <ul>
-                <Link to="/dashboard" className={toggleNavState === 1 ? "high" : ""} onClick={() => toggleNav(1)}><img src="/images/grup.png" alt="img" /><p>Trade</p></Link>
-                <Link to="/swap" className={toggleNavState === 2 ? "high" : ""} onClick={() => toggleNav(2)}><img src="/images/ic_outline-swap-horizontal-circle.png" alt="img" /><p>Swap</p></Link>
-                <Link to="/staking" className={toggleNavState === 3 ? "high" : ""} onClick={() => toggleNav(3)}><img src="/images/stack.png" alt="img" /><p>Staking</p></Link>
+                <Link to="/dashboard" className={linkState}><img src="/images/grup.png" alt="img" /><p>Trade</p></Link>
+                <Link to="/swap" className={swapLink}><img src="/images/ic_outline-swap-horizontal-circle.png" alt="img" /><p>Swap</p></Link>
+                <Link to="/staking" className={stakingLink}><img src="/images/stack.png" alt="img" /><p>Staking</p></Link>
                 <Link to="/dashboard"><img src="/images/Menu-Ico.png" alt="img" /><p>Pool</p><Soon text={'Coming Soon'}/></Link>
                 <Link to="/dashboard"><img src="/images/home.png" alt="img" /><p>Farm</p><Soon text={'Coming Soon'}/></Link>
             </ul>
