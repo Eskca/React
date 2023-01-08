@@ -24,7 +24,7 @@ const Header = () => {
                         <li><Link to="/">Education</Link></li>
                         <li><Link to="/">Roadmap</Link></li>
                         <li><Link to="/">Docs</Link></li>
-                        <Button text={'Launch App'} />
+                        <Link to='/dashboard'><Button text={'Launch App'} /></Link>
                     </ul>
                 </aside>
             </nav>
@@ -38,7 +38,7 @@ const Header = () => {
                     <li><Link to="/">Roadmap</Link></li>
                     <li><Link to="/">Docs</Link></li>
                 </ul>
-                <Button text='Launch App' />
+                <Link to='/dashboard'><Button text={'Launch App'} /></Link>
             </nav>
         </header>
     );

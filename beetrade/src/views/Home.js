@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import Longcard from "../components/Longcard";
@@ -21,7 +22,7 @@ const Home = () => {
                 </div>
                 <div className="wrapper">
                     <div className="cta-group">
-                        <Button text={'Launch App'} />
+                        <Link to='/dashboard'><Button text={'Launch App'} /></Link>
                         <img src="/images/Frame 35741.png" alt="images" />
                         <img src="/images/Group.png" alt="images" />
                     </div>

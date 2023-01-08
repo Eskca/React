@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Soon from "./Soon";
 const Dashaside = ({className, linkState, swapLink,stakingLink}) => {
     
-
     return (
         <nav className={className}>
             <ul>
