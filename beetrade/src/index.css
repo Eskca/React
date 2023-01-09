@@ -1547,7 +1547,7 @@ section{
   justify-content: center;
   display: none;
   flex-direction: column;
-  z-index: 100;
+  z-index: 1000;
   padding: 1rem;
   animation-name: fadeIn;
   animation-duration: 0.9s;
