@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
-const Modal = ({currecnyOne,imageOne,modalclass,modalOpen}) => {
-    console.log(modalOpen)
+const Modal = ({currecnyOne,imageOne,modalclass}) => {
     return (  
         <div className={`modal ${modalclass}`}>
             <h3 className="heading">Connect Wallet</h3>

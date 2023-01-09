@@ -13,10 +13,14 @@ const Swap = () => {
     const toggleNav = () => {
         setNavState(!navState)
     }
+    const [theme,setTheme] = useState(false);
+    const themeUpdate = () =>{
+        setTheme(!theme);
+    }
     return (
         <React.Fragment>
-            <Dashheader  openSideBar={toggleNav}/>
-            <main className="main-dash new-main">
+            <Dashheader  openSideBar={toggleNav} toggleTheme={themeUpdate}/>
+            <main className="main-dash new-main"  id={theme ? ("dark") : ("light")}>
                 <Dashaside className={navState === false ? "dashaside" : "dashaside open"} swapLink={'high'}/>
                 <section className="section dash-section swap-section">
                     <Circle />

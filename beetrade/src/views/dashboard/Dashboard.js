@@ -5,29 +5,36 @@ import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import Circle from "../../components/Circle";
 import OrdersCard from "../../components/OrdersCard";
+import Chart from "../../components/Chart";
 const Dashboard = () => {
     const [navState, setNavState] = useState(false);
     const toggleNav = () => {
-        setNavState(!navState)
+        setNavState(!navState);
     }
 
     const [toggleState, setToggleState] = useState(1);
     const toggleTab = (index) =>{
         setToggleState(index);
     }
+
+    const [theme,setTheme] = useState(false);
+    const themeUpdate = () =>{
+        setTheme(!theme);
+    }
     
     return (
         <React.Fragment>
-            <Dashheader openSideBar={toggleNav} />
-            <main className="main-dash">
+            <Dashheader openSideBar={toggleNav} toggleTheme={themeUpdate} />
+            <main className="main-dash" id={theme ? ("dark") : ("light")}>
                 <Dashaside  className={navState === false ? "dashaside" : "dashaside open"} linkState={'high'}/>
                 <section className="section dash-section">
                     <Circle />
                     <div className="wrapper">
                         <div className="box-wrapp">
                             <div className="group-one">
-                                <img src="/images/Frame 35630.png" alt="images" className="img desktop-img"/>
-                                <img src="/images/mobile-img.png" alt="images" className="img mobile-img"/>
+                                <div className="box-wrap chart-wrap">
+                                    <Chart op1={'Today'} op2={'1w'} op3={'1m'} op4={'3m'} op5={'6w'} op6={'1y'}/>
+                                </div>
                                 <div className="row-boxes">
                                     <div className="box-wrap boxTwo">
                                         <div className="box">

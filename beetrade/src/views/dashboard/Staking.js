@@ -13,11 +13,15 @@ const Staking = () => {
     const toggleNav = () => {
         setNavState(!navState)
     }    
+    const [theme,setTheme] = useState(false);
+    const themeUpdate = () =>{
+        setTheme(!theme);
+    }
 
     return (
         <React.Fragment>
-            <Dashheader openSideBar={toggleNav}/>
-            <main className="main-dash">
+            <Dashheader openSideBar={toggleNav} toggleTheme={themeUpdate}/>
+            <main className="main-dash" id={theme ? ("dark") : ("light")}>
                 <Dashaside className={navState === false ? "dashaside" : "dashaside open"} stakingLink={'high'}/>
                 <div className="content-wrapper">
                     <Circle />
